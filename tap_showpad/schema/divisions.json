@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "divisionId": {
+            "type": "string"
+        },
+        "divisionName": {
+            "type": "string"
+        },
+        "isGlobal": {
+            "type": "boolean"
+        },
+        "isPersonal": {
+            "type": "boolean"
+        },
+        "deletedAt": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "ownerUserId": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

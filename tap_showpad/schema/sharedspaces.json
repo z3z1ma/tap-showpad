@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "lastActivityAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "deletedAt": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "sharedSpaceId": {
+            "type": "string"
+        },
+        "creatorId": {
+            "type": "string"
+        },
+        "ownerId": {
+            "type": "string"
+        },
+        "sharedSpaceParticipantsIds": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "status": {
+            "type": "string"
+        }
+    }
+}

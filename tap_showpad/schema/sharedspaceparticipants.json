@@ -1,0 +1,76 @@
+{
+    "type": "object",
+    "properties": {
+        "sharedSpaceParticipantId": {
+            "type": "string"
+        },
+        "userId": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "accessGrantedAt": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "accessRevokedAt": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "lastActivityAt": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "deletedAt": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "sharedSpaceId": {
+            "type": "string"
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "firstName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "lastName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "emailAddress": {
+            "type": "string"
+        },
+        "organisation": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "jobTitle": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

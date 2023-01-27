@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "userId": {
+            "type": "string"
+        },
+        "firstName": {
+            "type": "string"
+        },
+        "lastName": {
+            "type": "string"
+        },
+        "emailAddress": {
+            "type": "string"
+        },
+        "deletedAt": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "isActive": {
+            "type": "boolean"
+        },
+        "isForgotten": {
+            "type": "boolean"
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "userRole": {
+            "type": "string"
+        },
+        "managerId": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "externalId": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

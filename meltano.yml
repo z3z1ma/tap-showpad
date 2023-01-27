@@ -1,0 +1,27 @@
+version: 1
+send_anonymous_usage_stats: true
+project_id: "tap-showpad"
+default_environment: test
+environments:
+  - name: test
+plugins:
+  extractors:
+    - name: "tap-showpad"
+      namespace: "tap_showpad"
+      pip_url: -e .
+      capabilities:
+        - state
+        - catalog
+        - discover
+        - about
+        - stream-maps
+      settings:
+        - name: api_key
+        - name: subdomain
+      config:
+        api_key: ""
+        subdomain: ""
+  loaders:
+    - name: target-jsonl
+      variant: andyh1203
+      pip_url: target-jsonl

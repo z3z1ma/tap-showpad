@@ -1,0 +1,114 @@
+{
+    "type": "object",
+    "properties": {
+        "assetId": {
+            "type": "string"
+        },
+        "divisionId": {
+            "type": "string"
+        },
+        "displayName": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string"
+        },
+        "source": {
+            "type": "string"
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "type": {
+            "type": "string"
+        },
+        "isSensitive": {
+            "type": "boolean"
+        },
+        "isShareable": {
+            "type": "boolean"
+        },
+        "isDownloadable": {
+            "type": "boolean"
+        },
+        "isDivisionShared": {
+            "type": "boolean"
+        },
+        "isAnnotatable": {
+            "type": "boolean"
+        },
+        "expiresAt": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "releasedAt": {
+            "type": [ "null", "string" ],
+            "format": "date-time"
+        },
+        "deletedAt": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "uploadedAt": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "archivedAt": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "format": "date-time"
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "externalId": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "commentsCount": {
+            "type": "integer"
+        },
+        "likesCount": {
+            "type": "integer"
+        },
+        "optimizedFileSize": {
+            "type": [
+                "integer",
+                "null"
+            ]
+        },
+        "originalFileSize": {
+            "type": [
+                "integer",
+                "null"
+            ]
+        },
+        "originalAssetId": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}
