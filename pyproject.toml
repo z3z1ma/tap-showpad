@@ -27,9 +27,15 @@ genson = "^1.2.2"
 [tool.poetry.extras]
 s3 = ["fs-s3fs"]
 
-[tool.isort]
+[tool.black] # https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file
+line-length = 100
+target-version = ["py39"]
+preview = true
+
+[tool.isort] # https://pycqa.github.io/isort/docs/configuration/options.html
+color_output = true
+line_length = 100
 profile = "black"
-multi_line_output = 3     # Vertical Hanging Indent
 src_paths = "tap_showpad"
 
 [build-system]

@@ -15,10 +15,7 @@ from singer_sdk.helpers._typing import TypeConformanceLevel
 from singer_sdk.helpers.jsonpath import extract_jsonpath
 from singer_sdk.pagination import BaseAPIPaginator, BaseOffsetPaginator
 from singer_sdk.streams import RESTStream
-from singer_sdk.streams.core import (  # noqa: F401
-    REPLICATION_FULL_TABLE,
-    REPLICATION_INCREMENTAL,
-)
+from singer_sdk.streams.core import REPLICATION_FULL_TABLE, REPLICATION_INCREMENTAL  # noqa: F401
 
 PAGE_SIZE = 50000
 
