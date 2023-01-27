@@ -1,26 +1,21 @@
 """REST client handling, including ShowpadStream base class."""
 import datetime
 import os
-import requests
-from typing import Any, Dict, Optional, Iterable
+from typing import Any, Dict, Iterable, Optional
 
+import requests
+from singer_sdk.authenticators import BearerTokenAuthenticator
+from singer_sdk.helpers._state import (
+    PROGRESS_MARKER_NOTE,
+    PROGRESS_MARKERS,
+    InvalidStreamSortException,
+    to_json_compatible,
+)
+from singer_sdk.helpers._typing import TypeConformanceLevel
 from singer_sdk.helpers.jsonpath import extract_jsonpath
 from singer_sdk.pagination import BaseAPIPaginator, BaseOffsetPaginator
 from singer_sdk.streams import RESTStream
-
-from singer_sdk.helpers._state import (
-    PROGRESS_MARKERS,
-    PROGRESS_MARKER_NOTE,
-    to_json_compatible,
-    InvalidStreamSortException,
-)
-from singer_sdk.helpers._typing import TypeConformanceLevel
-from singer_sdk.authenticators import BearerTokenAuthenticator
-from singer_sdk.streams.core import (  # noqa: F401
-    REPLICATION_INCREMENTAL,
-    REPLICATION_FULL_TABLE,
-)
-
+from singer_sdk.streams.core import REPLICATION_FULL_TABLE, REPLICATION_INCREMENTAL  # noqa: F401
 
 PAGE_SIZE = 50000
 
@@ -93,9 +88,7 @@ class ShowpadStream(RESTStream):
         """Return a new authenticator object.
 
         This method is called by the SDK framework to get an authenticator."""
-        return BearerTokenAuthenticator.create_for_stream(
-            self, token=self.config["api_key"]
-        )
+        return BearerTokenAuthenticator.create_for_stream(self, token=self.config["api_key"])
 
     @property
     def http_headers(self) -> dict:

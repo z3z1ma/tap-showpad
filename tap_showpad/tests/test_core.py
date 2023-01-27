@@ -2,7 +2,6 @@
 import os
 
 from singer_sdk.testing import get_standard_tap_tests, tap_sync_test
-
 from tap_showpad.tap import TapShowpad
 
 BASE_CONFIG = {
